@@ -1,8 +1,13 @@
 {
   "name": "baxi_pay",
   "version": "1.0.0",
+  "description": "BaxiPay API NodeJS SDK",
   "main": "index.js",
   "license": "MIT",
+  "author": "LuisChiej",
+  "scripts": {
+    "compile": "npx tsc"
+  },
   "dependencies": {
     "axios": "^0.27.2",
     "lodash": "^4.17.21"
@@ -12,9 +17,12 @@
     "@typescript-eslint/eslint-plugin": "^5.32.0",
     "@typescript-eslint/parser": "^5.32.0",
     "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
-    "eslint-plugin-promise": "^6.0.0"
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": "^2.7.1"
   }
 }

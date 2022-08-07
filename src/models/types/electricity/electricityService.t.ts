@@ -1,0 +1,1 @@
+type ElectricityServiceType = `${Discos}_${MeterType}`

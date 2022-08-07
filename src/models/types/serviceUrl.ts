@@ -1,0 +1,1 @@
+type ServiceUrl<T> = `services/${Service}/${T extends ElectricityRequest ? 'verify' | 'request' : T extends DataBundleRequest ? 'bundles' | 'request' : T extends CableRequest ? 'list' | 'addons' | 'request' : 'request'}`
