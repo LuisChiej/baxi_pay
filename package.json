@@ -8,6 +8,7 @@
   "scripts": {
     "compile": "npx tsc"
   },
+  "repository": "https://github.com/LuisChiej/baxi_pay.git",
   "dependencies": {
     "axios": "^0.27.2",
     "lodash": "^4.17.21"
