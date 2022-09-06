@@ -1,4 +1,4 @@
-enum Providers {
+export enum Providers {
     mtn = 'mtn',
     glo = 'glo',
     smile = 'smile',

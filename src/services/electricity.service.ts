@@ -1,3 +1,5 @@
+import { ElectricityRequest } from "models/types/electricity/electricityRequest.t";
+import { ServiceUrl } from "models/types/serviceUrl";
 import Baxi from "../baxi";
 
 export default class ElectricityService {

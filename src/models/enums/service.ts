@@ -1,4 +1,4 @@
-enum Service {
+export enum Service {
     airtime = 'airtime',
     electricity = 'electricity',
     databundle = 'databundle',

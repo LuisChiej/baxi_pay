@@ -1,3 +1,5 @@
+import { AirtimeRequest } from "models/types/airtime/airtimeRequest.t";
+import { ServiceUrl } from "models/types/serviceUrl";
 import Baxi from "../baxi";
 
 export default class AirtimeService {

@@ -1,4 +1,4 @@
-enum CableProviders {
+export enum CableProviders {
     dstv = 'dstv',
     startimes = 'startimes',
     gotv = 'gotv',

@@ -1,3 +1,6 @@
+import { CableProviders } from "models/enums/cableProviders";
+import { CableRequest } from "models/types/cable/cableRequest.t";
+import { ServiceUrl } from "models/types/serviceUrl";
 import Baxi from "../baxi";
 
 export default class CableService {

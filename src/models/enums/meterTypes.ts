@@ -1,4 +1,4 @@
-enum MeterType {
+export enum MeterType {
     PREPAID = 'prepaid',
     POSTPAID = 'postpaid'
 }

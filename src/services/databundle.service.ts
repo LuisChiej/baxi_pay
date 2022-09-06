@@ -1,3 +1,6 @@
+import { Providers } from "models/enums/providers";
+import { DataBundleRequest } from "models/types/databundle/dataBundleRequest.t";
+import { ServiceUrl } from "models/types/serviceUrl";
 import Baxi from "../baxi";
 
 export default class DataBundleService {
