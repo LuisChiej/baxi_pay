@@ -1,4 +1,4 @@
-import { Providers } from "models/enums/providers"
+import { Providers } from "../../../models/enums/providers"
 
 export type AirtimeRequest = {
     phone: string,

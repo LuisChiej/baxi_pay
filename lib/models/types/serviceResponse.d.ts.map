@@ -1,0 +1,1 @@
+{"version":3,"file":"serviceResponse.d.ts","sourceRoot":"","sources":["../../../src/models/types/serviceResponse.ts"],"names":[],"mappings":"AAAA,aAAK,eAAe,GAAG;IACnB,MAAM,EAAE,SAAS,GAAG,OAAO,CAAC;IAC5B,OAAO,EAAE,MAAM,CAAC;IAChB,IAAI,EAAE,GAAG,GAAG,MAAM,CAAC;IACnB,IAAI,CAAC,EAAE,GAAG,CAAC;IACX,MAAM,CAAC,EAAE,GAAG,CAAA;CACf,CAAA"}

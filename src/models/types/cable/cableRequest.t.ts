@@ -1,4 +1,4 @@
-import { CableProviders } from "models/enums/cableProviders"
+import { CableProviders } from "../../../models/enums/cableProviders"
 
 export type CableRequest = {
     service_type: CableProviders

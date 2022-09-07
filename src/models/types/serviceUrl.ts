@@ -1,4 +1,4 @@
-import { Service } from "models/enums/service";
+import { Service } from "../../models/enums/service";
 import { CableRequest } from "./cable/cableRequest.t";
 import { DataBundleRequest } from "./databundle/dataBundleRequest.t";
 import { ElectricityRequest } from "./electricity/electricityRequest.t";
