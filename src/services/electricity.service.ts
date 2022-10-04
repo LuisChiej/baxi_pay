@@ -1,6 +1,7 @@
 import { ElectricityRequest } from "../models/types/electricity/electricityRequest.t";
 import { ServiceUrl } from "../models/types/serviceUrl";
 import Baxi from "..";
+import { AxiosError } from "axios";
 
 export default class ElectricityService {
     #baxi: Baxi;
@@ -21,7 +22,11 @@ export default class ElectricityService {
             const response = await this.#baxi.axios().post(url, data)
             if(response.status === 200) return response.data;
             return null;
-        } catch (e) {
+        } catch (e: unknown) {
+            if(e instanceof AxiosError) {
+                return e?.response?.data;
+            }
+
             return null;
         }
     }
