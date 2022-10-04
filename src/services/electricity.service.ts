@@ -17,16 +17,24 @@ export default class ElectricityService {
             "account_number": params.account_number
         }
 
-        const response = await this.#baxi.axios().post(url, data)
-        if(response.status === 200) return response.data;
-        return null;
+        try {
+            const response = await this.#baxi.axios().post(url, data)
+            if(response.status === 200) return response.data;
+            return null;
+        } catch (e) {
+            return null;
+        }
     }
 
     async buy(params: ElectricityRequest): Promise<any> {
         const url: ServiceUrl<ElectricityRequest> = 'services/electricity/request'
 
-        const response = await this.#baxi.axios().post(url, params)
-        if(response.status === 200) return response.data;
-        return null;
+        try {
+            const response = await this.#baxi.axios().post(url, params)
+            if(response.status === 200) return response.data;
+            return null;
+        } catch (e) {
+            return null;
+        }
     }
 }

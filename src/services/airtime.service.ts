@@ -12,8 +12,12 @@ export default class AirtimeService {
     async buy(params: AirtimeRequest): Promise<any> {
         const url: ServiceUrl<AirtimeRequest> = 'services/airtime/request'
 
-        const response = await this.#baxi.axios().post(url, params)
-        if(response.status === 200) return response.data;
-        return null;
+        try {
+            const response = await this.#baxi.axios().post(url, params)
+            if(response.status === 200) return response.data;
+            return null;
+        } catch (e) {
+            return null;
+        }
     }
 }
