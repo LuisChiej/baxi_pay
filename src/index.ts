@@ -4,6 +4,7 @@ import AirtimeService from "./services/airtime.service";
 import CableService from "./services/cable.service";
 import DataBundleService from "./services/databundle.service";
 import ElectricityService from "./services/electricity.service";
+import AccountService from "./services/account.service";
 
 export default class Baxi {
     private _apiKey: string;
@@ -14,6 +15,7 @@ export default class Baxi {
     public cable: CableService;
     public airtime: AirtimeService;
     public dataBundle: DataBundleService;
+    public account: AccountService;
 
     constructor(apiKey: string, environment: 'development' | 'production') {
         this._apiKey = apiKey;
@@ -31,6 +33,7 @@ export default class Baxi {
         this.cable = new CableService(this)
         this.airtime = new AirtimeService(this)
         this.dataBundle = new DataBundleService(this)
+        this.account = new AccountService(this)
     }
 
     // #onInit(): void {

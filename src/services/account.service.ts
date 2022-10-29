@@ -1,6 +1,6 @@
 import Baxi from "..";
 
-export default class BalanceService {
+export default class AccountService {
     #baxi: Baxi;
     
     constructor(baxi: Baxi) {
