@@ -2,6 +2,7 @@ import { CableProviders } from "../models/enums/cableProviders";
 import { CableRequest } from "../models/types/cable/cableRequest.t";
 import { ServiceUrl } from "../models/types/serviceUrl";
 import Baxi from "..";
+import { AxiosError } from "axios";
 
 export default class CableService {
     #baxi: Baxi;
@@ -31,6 +32,27 @@ export default class CableService {
         const response = await this.#baxi.axios().post(url, data)
         if(response.status === 200) return response.data;
         return null;
+    }
+
+    async verify(params: CableRequest): Promise<ServiceResponse | null> {
+        const url = 'services/namefinder/query'
+
+        const data = {
+            "service_type": params.service_type,
+            "account_number": params.smartcard_number
+        }
+
+        try {
+            const response = await this.#baxi.axios().post(url, data)
+            if(response.status === 200) return response.data;
+            return null;
+        } catch (e: unknown) {
+            if(e instanceof AxiosError) {
+                return e?.response?.data;
+            }
+
+            return null;
+        }
     }
 
     async buy(params: CableRequest): Promise<ServiceResponse | null> {

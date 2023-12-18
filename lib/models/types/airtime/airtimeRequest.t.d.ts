@@ -1,5 +1,5 @@
 import { Providers } from "../../../models/enums/providers";
-export declare type AirtimeRequest = {
+export type AirtimeRequest = {
     phone: string;
     amount: number;
     service_type: Providers;

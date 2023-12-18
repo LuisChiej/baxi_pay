@@ -6,6 +6,7 @@ export default class CableService {
     constructor(baxi: Baxi);
     getCableProducts(provider: CableProviders): Promise<ServiceResponse | null>;
     getAddons(params: CableRequest): Promise<ServiceResponse | null>;
+    verify(params: CableRequest): Promise<ServiceResponse | null>;
     buy(params: CableRequest): Promise<ServiceResponse | null>;
 }
 //# sourceMappingURL=cable.service.d.ts.map

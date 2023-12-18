@@ -1,4 +1,4 @@
-declare type ServiceResponse = {
+type ServiceResponse = {
     status: 'success' | 'error';
     message: string;
     code: 200 | string;

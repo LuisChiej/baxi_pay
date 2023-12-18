@@ -1,5 +1,5 @@
 import { CableProviders } from "../../../models/enums/cableProviders";
-export declare type CableRequest = {
+export type CableRequest = {
     service_type: CableProviders;
     smartcard_number?: string;
     total_amount?: number;

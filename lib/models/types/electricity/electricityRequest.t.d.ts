@@ -1,5 +1,5 @@
 import { ElectricityServiceType } from "./electricityService.t";
-export declare type ElectricityRequest = {
+export type ElectricityRequest = {
     service_type: ElectricityServiceType;
     account_number: string;
     amount?: number;
