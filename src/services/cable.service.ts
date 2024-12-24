@@ -50,7 +50,7 @@ export default class CableService {
             if(e instanceof AxiosError) {
                 return e?.response?.data;
             }
-
+            console.log(e)
             return null;
         }
     }

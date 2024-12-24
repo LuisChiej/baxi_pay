@@ -4,7 +4,7 @@ import Baxi from "..";
 import { AxiosError } from "axios";
 
 export default class ElectricityService {
-    #baxi: Baxi;
+    readonly #baxi: Baxi;
     
     constructor(baxi: Baxi) {
         this.#baxi = baxi;
@@ -26,7 +26,7 @@ export default class ElectricityService {
             if(e instanceof AxiosError) {
                 return e?.response?.data;
             }
-
+            console.log(e)
             return null;
         }
     }
@@ -39,6 +39,19 @@ export default class ElectricityService {
             if(response.status === 200) return response.data;
             return null;
         } catch (e) {
+            console.log(e)
+            return null;
+        }
+    }
+
+    async requery(reference: string): Promise<any> {
+        const url = `services/superagent/transaction/requery?agentReference=${reference}`
+
+        try {
+            const response = await this.#baxi.axios().get(url)
+            if(response.status === 200) return response.data;
+        } catch (e) {
+            console.log(e)
             return null;
         }
     }

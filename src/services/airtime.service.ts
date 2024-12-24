@@ -17,6 +17,7 @@ export default class AirtimeService {
             if(response.status === 200) return response.data;
             return null;
         } catch (e) {
+            console.log(e)
             return null;
         }
     }

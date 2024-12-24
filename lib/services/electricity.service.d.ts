@@ -5,5 +5,6 @@ export default class ElectricityService {
     constructor(baxi: Baxi);
     verify(params: ElectricityRequest): Promise<ServiceResponse | null>;
     buy(params: ElectricityRequest): Promise<any>;
+    requery(reference: string): Promise<any>;
 }
 //# sourceMappingURL=electricity.service.d.ts.map

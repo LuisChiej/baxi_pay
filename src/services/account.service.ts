@@ -14,6 +14,7 @@ export default class AccountService {
             const response = await this.#baxi.axios().get(url);
             if(response.status === 200) return response.data;
         } catch (e) {
+            console.log(e)
             return null;
         }
     }
