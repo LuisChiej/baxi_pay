@@ -1,6 +1,6 @@
 {
   "name": "baxi_pay",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "BaxiPay API NodeJS SDK",
   "main": "index.js",
   "license": "MIT",
