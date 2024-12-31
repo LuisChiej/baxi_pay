@@ -2,6 +2,7 @@ import { ElectricityRequest } from "../models/types/electricity/electricityReque
 import Baxi from "..";
 export default class ElectricityService {
     #private;
+    readonly _statuses: number[];
     constructor(baxi: Baxi);
     verify(params: ElectricityRequest): Promise<ServiceResponse | null>;
     buy(params: ElectricityRequest): Promise<any>;

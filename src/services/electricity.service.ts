@@ -5,6 +5,7 @@ import { AxiosError } from "axios";
 
 export default class ElectricityService {
     readonly #baxi: Baxi;
+    readonly _statuses = [201, 200];
     
     constructor(baxi: Baxi) {
         this.#baxi = baxi;
@@ -20,7 +21,7 @@ export default class ElectricityService {
 
         try {
             const response = await this.#baxi.axios().post(url, data)
-            if(response.status === 200) return response.data;
+            if(this._statuses.includes(response.status)) return response.data;
             return null;
         } catch (e: unknown) {
             if(e instanceof AxiosError) {
@@ -36,7 +37,7 @@ export default class ElectricityService {
 
         try {
             const response = await this.#baxi.axios().post(url, params)
-            if(response.status === 200) return response.data;
+            if(this._statuses.includes(response.status)) return response.data;
             return null;
         } catch (e) {
             console.log(e)
@@ -49,7 +50,7 @@ export default class ElectricityService {
 
         try {
             const response = await this.#baxi.axios().get(url)
-            if(response.status === 200) return response.data;
+            if(this._statuses.includes(response.status)) return response.data;
         } catch (e) {
             console.log(e)
             return null;
