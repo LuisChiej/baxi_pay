@@ -1,8 +1,9 @@
-type ServiceResponse = {
-    status: 'success' | 'error';
+import { ERROR_CODE } from "./base";
+export type ServiceResponse = {
+    status: 'success' | 'error' | 'pending';
     message: string;
-    code: 200 | string;
-    data?: any;
-    errors?: any;
+    code: 200 | ERROR_CODE;
+    data?: Record<string, unknown>;
+    errors?: Array<unknown>;
 };
 //# sourceMappingURL=serviceResponse.d.ts.map

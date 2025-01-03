@@ -3,6 +3,7 @@ import { CableRequest } from "../models/types/cable/cableRequest.t";
 import { ServiceUrl } from "../models/types/serviceUrl";
 import Baxi from "..";
 import { AxiosError } from "axios";
+import { ServiceResponse } from "../models/types/serviceResponse";
 
 export default class CableService {
     #baxi: Baxi;
