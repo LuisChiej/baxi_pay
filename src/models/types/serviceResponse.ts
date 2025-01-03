@@ -5,7 +5,11 @@ export type ServiceResponse = {
     message: string;
     code: 200 | ERROR_CODE;
     data?: {
-        rawOutput: Record<string, string | null>;
+        rawOutput?: Record<string, string | null>;
+        user?: {
+            rawOutput?: Record<string, string | null>;
+            [x: string]: unknown;
+        };
         [x: string]: unknown;
     };
     errors?: Array<unknown>
