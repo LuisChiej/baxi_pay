@@ -6,7 +6,7 @@ export type ServiceResponse = {
     code: 200 | ERROR_CODE;
     data?: {
         rawOutput: Record<string, string | null>;
-        [x: string]: unknown;
+        [x: string]: any;
     };
     errors?: Array<unknown>
 }
