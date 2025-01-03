@@ -40,6 +40,9 @@ export default class ElectricityService {
             if(this._statuses.includes(response.status)) return response.data;
             return null;
         } catch (e) {
+            if(e instanceof AxiosError) {
+                return e?.response?.data;
+            }
             console.log(e)
             return null;
         }
@@ -51,7 +54,11 @@ export default class ElectricityService {
         try {
             const response = await this.#baxi.axios().get(url)
             if(this._statuses.includes(response.status)) return response.data;
+            return null;
         } catch (e) {
+            if(e instanceof AxiosError) {
+                return e?.response?.data;
+            }
             console.log(e)
             return null;
         }
