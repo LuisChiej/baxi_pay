@@ -1,5 +1,6 @@
 export enum Discos {
     IkejaElectric = 'ikeja_electric',
+    BeninElectric = 'benin_electric',
     IbadanElectric = 'ibadan_electric',
     EkoElectric = 'eko_electric',
     KanoElectric = 'kedco_electric',

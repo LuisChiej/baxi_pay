@@ -1,21 +1,21 @@
-import Baxi from "..";
+import Baxi from '..';
 
 export default class AccountService {
-    #baxi: Baxi;
-    
-    constructor(baxi: Baxi) {
-        this.#baxi = baxi;
-    }
+  #baxi: Baxi;
 
-    async getBalance(): Promise<any> {
-        const url: string = 'services/superagent/account/balance';
+  constructor(baxi: Baxi) {
+    this.#baxi = baxi;
+  }
 
-        try {
-            const response = await this.#baxi.axios().get(url);
-            if(response.status === 200) return response.data;
-        } catch (e) {
-            console.log(e)
-            return null;
-        }
+  async getBalance(): Promise<any> {
+    const url: string = 'services/superagent/account/balance';
+
+    try {
+      const response = await this.#baxi.axios().get(url);
+      if (response.status === 200) return response.data;
+    } catch (e) {
+      console.log(e);
+      return null;
     }
+  }
 }
