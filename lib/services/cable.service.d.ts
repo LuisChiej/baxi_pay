@@ -1,7 +1,7 @@
-import { CableProviders } from "../models/enums/cableProviders";
-import { CableRequest } from "../models/types/cable/cableRequest.t";
-import Baxi from "..";
-import { ServiceResponse } from "../models/types/serviceResponse";
+import { CableProviders } from '../models/enums/cableProviders';
+import { CableRequest } from '../models/types/cable/cableRequest.t';
+import Baxi from '..';
+import { ServiceResponse } from '../models/types/serviceResponse';
 export default class CableService {
     #private;
     constructor(baxi: Baxi);

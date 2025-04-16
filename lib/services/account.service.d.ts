@@ -1,4 +1,4 @@
-import Baxi from "..";
+import Baxi from '..';
 export default class AccountService {
     #private;
     constructor(baxi: Baxi);

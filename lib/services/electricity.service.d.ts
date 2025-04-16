@@ -1,6 +1,6 @@
-import { ElectricityRequest } from "../models/types/electricity/electricityRequest.t";
-import Baxi from "..";
-import { ServiceResponse } from "../models/types/serviceResponse";
+import { ElectricityRequest } from '../models/types/electricity/electricityRequest.t';
+import Baxi from '..';
+import { ServiceResponse } from '../models/types/serviceResponse';
 export default class ElectricityService {
     #private;
     readonly _statuses: number[];

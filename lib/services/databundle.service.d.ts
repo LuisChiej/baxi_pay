@@ -1,6 +1,6 @@
-import { Providers } from "../models/enums/providers";
-import { DataBundleRequest } from "../models/types/databundle/dataBundleRequest.t";
-import Baxi from "..";
+import { Providers } from '../models/enums/providers';
+import { DataBundleRequest } from '../models/types/databundle/dataBundleRequest.t';
+import Baxi from '..';
 export default class DataBundleService {
     #private;
     constructor(baxi: Baxi);
